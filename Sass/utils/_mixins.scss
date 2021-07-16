@@ -1,0 +1,12 @@
+@mixin flex-center {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin button {
+    color: #fff;
+    padding: 0 20px;
+    border-radius: 20px;
+    opacity: 1;
+}

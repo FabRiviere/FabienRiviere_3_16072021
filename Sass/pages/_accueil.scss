@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+
+.main {    
+    margin: 0;
+    padding: 0;
+    @include flex-center;
+    flex-direction: column;
+    font-family: $font-text;
+}
+
+.location {
+    width: 100%;
+    @include flex-center;
+    background-color: #f2f2f2;
+    color: #363636;
+    font-size: 1.2em;
+    font-weight: bold;
+    &__ico {
+        margin-right: 1rem;
+    }
+}
+
+.pres {
+    background-color: #fbf9f9;
+    @include flex-center;
+    text-align: center;
+    &__container{
+        padding: 30px;
+    }
+        &__title {
+            margin:0 30px 10px 30px;
+            font-size: 1.6em;
+        }
+}
