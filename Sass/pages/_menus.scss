@@ -15,8 +15,7 @@ body {
 }
 
 .header {
-    display: flex;
-    justify-content: flex-start;
+    
     & a {
         color: #000;  
     }
@@ -32,9 +31,12 @@ body {
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: cover;
-       
+        object-fit: cover;      
     }
+}
+#menu {
+    @include flex-center;
+    background-color: #faf9f9;
 }
 .menu {
     position: relative;
@@ -61,6 +63,11 @@ body {
         color: #747171;
         font-weight: 100;
         height: 30px;
+        margin-bottom: 20px;
+        margin-left: 5px;
+    }
+    &__container {
+        margin-bottom: 50px;
     }
 }
 .menu__card {
@@ -68,4 +75,33 @@ body {
     justify-content: space-between;
     align-items: flex-end;
     background-color: #fff;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    border-radius: 20px;
+    &-dish-title {
+        font-size: 1.2em;
+        font-weight: bold;
+    }
+    &-dish-subtitle {
+        font-size: 1em;
+    }
+    & p {
+        margin: 0;
+        line-height: 1.5em;
+    }
+    &-price {
+        font-weight: bold;
+        padding: 10px 20px 5px 0;
+    }
+}
+.menu__container__button {
+    @include flex-center;
+}
+
+.menu__button {
+    @include button;
+    padding: 20px 50px 20px 50px;
+    &:hover {
+        @include button-hover;
+    }
 }
