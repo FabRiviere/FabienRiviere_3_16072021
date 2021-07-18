@@ -1,7 +1,12 @@
+// doit être rangé dans l'ordre : utils,components,layout, pages
 
 @import"./Sass/utils/variables";
 @import"./Sass/utils/mixins";
 
+@import"./Sass/components/button";
+
 @import"./Sass/layout/header";
+@import"./Sass/layout/footer";
 
 @import"./Sass/pages/accueil";
+@import"./Sass/pages/menus";

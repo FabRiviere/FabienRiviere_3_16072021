@@ -10,3 +10,8 @@
     border-radius: 20px;
     opacity: 1;
 }
+
+@mixin underline {
+    border-bottom: 3px solid $color-tertiary;
+    width: 50px;
+}
