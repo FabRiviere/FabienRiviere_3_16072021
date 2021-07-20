@@ -10,8 +10,75 @@
     border-radius: 20px;
     opacity: 1;
 }
-
+/// Soulignement des titres des menus
 @mixin underline {
     border-bottom: 3px solid $color-tertiary;
     width: 50px;
+}
+/// Permet d'appliquer un gradient sur le texte avec BG img (gradient),
+/// BG size pr que gradient prenne toute la H et la W, 
+/// BG-clip pour n'afficher BG que la ou il y a du texte,
+/// Text-fill-color (transparent) pour supprimer remplissage du texte. BG-Color (par défault) si problème d'affichage.
+@mixin gradient-text {
+    background-color: #fff;
+    background-image: $color-gradient;
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color : transparent;
+    -moz-text-fill-color: transparent;
+}
+/// Animation des coeurs
+@mixin heart-animation {
+    @keyframes animationheart {
+        0% {
+            background-size: 100% 0%;
+        }
+        100% {
+            background-size: 100% 100%;
+        }
+    }
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    position: absolute;
+    &:hover {
+        cursor: pointer;
+        background: $color-gradient;
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        -webkit-animation: animationheart 1s ease-in-out;
+        animation: animationheart 1s ease-in-out;
+    }
+}
+/// animation des cartes de menus
+@mixin chekedcard {
+    @keyframes slide {
+        0% {
+            transform: translateX(100px);
+        }
+        25% {
+            transform: translateX(75px);
+        }
+        50% {
+            transform: translateX(50px);
+        }
+        75% {
+            transform: translateX(25px);
+        }
+        100% {
+            transform: translateX(0px);
+        }   
+        0%,50% {
+            opacity: 0;
+        }    
+    }  
+    
+    background-color: $color-tertiary;
+    -webkit-animation: slide 2s ease-in-out forwards;
+    animation: slide 2s ease-in-out forwards;
+   
 }

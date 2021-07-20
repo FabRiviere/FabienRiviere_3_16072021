@@ -156,9 +156,18 @@ body {
         color: rgb(68, 65, 65);
         font-size: 1em; 
     }
-    &-heart {
-        margin: 15px 30px;
-        font-size: 1.5em;
-        color: rgb(32, 16, 16);
-    }
+}
+.card__description-hearth {
+    @include flex-center;
+    width: 30px;  
+    margin: 15px 30px;
+    font-size: 1.5em;    
+    cursor: pointer;    
+}
+
+.heart-empty {
+    color:#747171;
+}
+.heart-full {
+    @include heart-animation;
 }

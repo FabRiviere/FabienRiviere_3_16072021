@@ -76,8 +76,10 @@ body {
     align-items: flex-end;
     background-color: #fff;
     margin: 10px 0 10px 0;
-    padding: 10px;
     border-radius: 20px;
+    &-dish {
+        padding: 10px;
+    }
     &-dish-title {
         font-size: 1.2em;
         font-weight: bold;
@@ -93,6 +95,19 @@ body {
         font-weight: bold;
         padding: 10px 20px 5px 0;
     }
+    &:hover {
+        & > .check {
+            @include flex-center;
+            @include chekedcard;
+            background-color: $color-tertiary;
+            height: 75px;
+            width: 50px;
+            margin: 0px;
+            border-radius: 0px 20px 20px 0px;
+        }
+        
+    }
+
 }
 .menu__container__button {
     @include flex-center;
@@ -104,4 +119,8 @@ body {
     &:hover {
         @include button-hover;
     }
+}
+
+.check {
+    display: none;
 }
