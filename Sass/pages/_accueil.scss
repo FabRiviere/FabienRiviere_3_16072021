@@ -16,7 +16,7 @@
         transform: rotate(-360deg);
     }
 }
-    
+/// Loader spinner
 .loader {
     @include flex-center;
     width: 100%;
@@ -25,60 +25,68 @@
     vertical-align: middle;
     margin: 0;
     padding: 0;
-    z-index: 9999;
     visibility: hidden;
-    
+    z-index: 1;
 }
 .loader-circle-1 {
-    width: 250px;
-    height: 250px;
+    @include flex-center;
+    width: 300px;
+    height: 300px;
     top: 0;
     left: 0;
     border-radius: 50%;
-    border: 6px solid transparent;
-    border-top-color: $color-primary;
-    border-bottom-color: $color-primary;
-    animation: spin 3s linear 0s both; 
+    border-top: 10px solid $color-primary;
+    border-right: 2px solid transparent;
+    border-bottom: 10px solid $color-primary;
+    border-left: 2px solid transparent;
+    animation: spin 2s linear 0s both; 
     position: relative;
+    & span {
+        @include gradient-text;
+        font-size: 2em;
+        font-weight:bold;  
+    }
     &::before {
         content:"";
         position: absolute;
-        top:10px ; 
-        left: 10px;
-        bottom: 10px;
-        right: 10px;
-        border-radius: 50%;
-        border: 5px solid transparent;
-        border-top-color: $color-tertiary;
-        border-bottom-color:$color-tertiary ;
-        opacity: 0.6;
-        animation: spin-reverse 2s linear 0s both;
+        top:20px ; 
+        left: 20px;
+        bottom: 20px;
+        right: 20px;
+        border-radius: 50%; 
+        border-top: 10px solid $color-tertiary;
+        border-right: 2px solid transparent;
+        border-bottom: 10px solid $color-tertiary;
+        border-left: 2px solid transparent;
+        opacity: 0.8;
+        animation: spin 2s linear 0s both;
     }
     &::after {
         content:"";
         position: absolute;
-        top: 30px ; 
-        left: 30px;
-        bottom: 30px;
-        right: 30px;
+        top: 40px ; 
+        left: 40px;
+        bottom: 40px;
+        right: 40px;
         border-radius: 50%;
-        border: 5px solid transparent;
-        border-top-color: $color-secondary;
-        border-bottom-color:$color-secondary ;
-        opacity: 0.6;
-        animation: spin-reverse 2s linear 0s both;
+        border-top:  10px solid $color-secondary;
+        border-right: 10px solid transparent ;
+        border-bottom: 10px solid $color-secondary;
+        border-left: 10px solid transparent;
+        opacity: 0.8;
+        animation: spin 2s linear 0s both;
     }
 }
+/// Body
 body {
     margin: 0;
-    z-index: 1;
-
     }
+///all links
 * a {
     text-decoration: none;
     color: #fff;
 }
-
+/// Main section
 .main {    
     margin: 0;
     padding: 0;
@@ -86,7 +94,7 @@ body {
     flex-direction: column;
     font-family: $font-text;
 }
-
+///Section location
 .location {
     width: 100%;
     @include flex-center;
@@ -98,10 +106,11 @@ body {
         margin-right: 1rem;
     }
 }
-
+/// Presentation
 .pres {
     background-color: #faf9f9;
     text-align: center;
+    width: 100%;
     &__container{
         padding: 30px;
         @include flex-center;
@@ -112,14 +121,14 @@ body {
             font-size: 1.6em;
         }
 }
-
+/// Button exploration in section presentation
 .pres__button {
    @include button;
    &:hover{
    @include button-hover;
    }
 }
-
+/// Functions
 .work {
     font-weight: bold;
     width: 100%;
@@ -133,7 +142,7 @@ body {
         margin-bottom: 20px;
         border-radius: 20px;
         position: relative;
-        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.16);
+        box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
         &:hover {
             @include button-hover;
             background: lighten($color-primary, 30%);
@@ -141,8 +150,7 @@ body {
                 color: $color-primary;
                 font-weight: bold;
             }
-        }
-               
+        }       
         &-number {
             background: $color-primary;
             padding: 5px 10px;
@@ -161,7 +169,7 @@ body {
         }
     }
 }
-
+/// Section restaurants
 .restaurants {
     background-color: #f2f2f2;
     width: 100%;
@@ -169,10 +177,8 @@ body {
        margin: 50px 20px 0 20px;
     }
 }
-
 .restaurant__cards {
-    padding: 20px;
-    
+    padding: 20px; 
 }
 .restaurant__card {
     background-color: #fff;
@@ -185,7 +191,6 @@ body {
     border-radius: 20px;
     box-shadow: 0 0 10px 0 rgba(0,0,0,0.3);
     margin-bottom: 20px;
-
     &-image {
         width: 100%;
         height: 190px;
@@ -210,7 +215,7 @@ body {
         }
     }
 }
-
+/// restaurant menu cards
 .card__description {
     display: flex;
     justify-content: space-between;
@@ -237,7 +242,6 @@ body {
     font-size: 1.5em;    
     cursor: pointer;    
 }
-
 .heart-empty {
     color:#747171;
 }

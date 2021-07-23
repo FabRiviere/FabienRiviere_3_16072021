@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Lien vers le fichier css-->
+    <!-- Link to the css file-->
     <link rel="stylesheet" href="main.css">
-    <!--Lien vers la police Shrikhand-->
+    <!--Link to the Shrikhand font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
-    <!--Lien vers la police Roboto-->
+    <!--Link to Roboto font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&family=Shrikhand&display=swap" rel="stylesheet">    
-    <!--Lien vers FontAwesome-->
+    <!--Link to FontAwesome-->
     <script src="https://kit.fontawesome.com/f15107843b.js" crossorigin="anonymous"></script>
     <title>À la française</title>
 </head>
 <body>
-
+    <!--header-->
     <header>
         <div class="header">
             <div class="header__back-arrow">
@@ -32,26 +32,32 @@
             </h1>
         </div>
     </header>
-
+    <!--restaurant image-->
     <div class="image">
         <img class="image__img" src="./images/restaurants/a-la-francaise.jpg" alt="À la française" />
     </div>
-
+    <!--menu section-->
     <section id="menu">
         <div class="menu">
             <div class="menu__header">
                 <h2 class="menu__header__title">À la française</h2>
-                <div class="menu__header__heart">
-                    <i class="far fa-heart"></i>
+                <div class="hearth">
+                    <div class="heart-empty">
+                        <i class="far fa-heart"></i>
+                    </div>
+                    <div class="heart-full">
+                        <i class="fas fa-heart"></i>
+                    </div>
                 </div>
             </div>
-
+            <!--menu container-->
             <div class="menu__grid">
                 <div class="menu__grid__container">
+                    <!--appetizer menu-->
                     <div class="menu__grid__title">
                         <h3>ENTRÉES</h3>
                     </div>
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-1">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -64,10 +70,13 @@
                             <div class="menu__card-price">
                                 25€
                             </div>
+                            <div class="check">
+                                <i class="fas fa-check-circle"></i> 
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-2">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -80,10 +89,15 @@
                             <div class="menu__card-price">
                                 35€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-3">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -96,16 +110,20 @@
                             <div class="menu__card-price">
                                 20€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            
-
+                <!--menu of dishes-->
                 <div class="menu__grid__container">
                     <div class="menu__grid__title">
                         <h3>PLATS</h3>
                     </div>
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-4">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -118,10 +136,15 @@
                             <div class="menu__card-price">
                                 40€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-5">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -134,10 +157,15 @@
                             <div class="menu__card-price">
                                 35€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-6">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -150,15 +178,20 @@
                             <div class="menu__card-price">
                                 44€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-
+                <!--dessert menu-->
                 <div class="menu__grid__container">
                     <div class="menu__grid__title">
                         <h3>DESSERTS</h3>
                     </div>
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-7">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -171,10 +204,15 @@
                             <div class="menu__card-price">
                                 18€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-8">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
@@ -187,14 +225,19 @@
                             <div class="menu__card-price">
                                 22€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div class="menu__grid__card">
+                    <div class="menu__grid__card" id="card-9">
                         <div class="menu__card">
                             <div class="menu__card-dish">
                                 <div class="menu__card-dish-title">
-                                    <p>Millefeuille croustillant </p>
+                                    <p>Millefeuille croustillant</p>
                                 </div>
                                 <div class="menu__card-dish-subtitle">
                                     <p>Myrtilles et pâte d’amande</p>
@@ -203,19 +246,24 @@
                             <div class="menu__card-price">
                                 23€
                             </div>
+                            <div class="check">
+                                <div class="rotate">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             
             </div>
-
+            <!--purchase order button-->
             <div class="menu__container__button">
                 <div class="menu__button">Commander</div>
             </div>
 
         </div>
     </section>
-
+    <!--Footer-->
     <footer class="footer">
         <div class="footer__bloc">
             <div class="footer__bloc-logo">
@@ -257,6 +305,5 @@
             </div>
         </div>
     </footer>
-    
 </body>
 </html>

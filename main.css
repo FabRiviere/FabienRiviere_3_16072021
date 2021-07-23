@@ -16,7 +16,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 80px;
+  height: 70px;
   width: 100%;
   -webkit-box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 5px 6px 0px rgba(0, 0, 0, 0.2);
@@ -141,59 +141,83 @@ body {
   vertical-align: middle;
   margin: 0;
   padding: 0;
-  z-index: 9999;
   visibility: hidden;
+  z-index: 1;
 }
 
 .loader-circle-1 {
-  width: 250px;
-  height: 250px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 300px;
+  height: 300px;
   top: 0;
   left: 0;
   border-radius: 50%;
-  border: 6px solid transparent;
-  border-top-color: #9356DC;
-  border-bottom-color: #9356DC;
-  -webkit-animation: spin 3s linear 0s both;
-          animation: spin 3s linear 0s both;
+  border-top: 10px solid #9356DC;
+  border-right: 2px solid transparent;
+  border-bottom: 10px solid #9356DC;
+  border-left: 2px solid transparent;
+  -webkit-animation: spin 2s linear 0s both;
+          animation: spin 2s linear 0s both;
   position: relative;
+}
+
+.loader-circle-1 span {
+  background-color: #fff;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background-image: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-size: 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 .loader-circle-1::before {
   content: "";
   position: absolute;
-  top: 10px;
-  left: 10px;
-  bottom: 10px;
-  right: 10px;
+  top: 20px;
+  left: 20px;
+  bottom: 20px;
+  right: 20px;
   border-radius: 50%;
-  border: 5px solid transparent;
-  border-top-color: #99e2d0;
-  border-bottom-color: #99e2d0;
-  opacity: 0.6;
-  -webkit-animation: spin-reverse 2s linear 0s both;
-          animation: spin-reverse 2s linear 0s both;
+  border-top: 10px solid #99e2d0;
+  border-right: 2px solid transparent;
+  border-bottom: 10px solid #99e2d0;
+  border-left: 2px solid transparent;
+  opacity: 0.8;
+  -webkit-animation: spin 2s linear 0s both;
+          animation: spin 2s linear 0s both;
 }
 
 .loader-circle-1::after {
   content: "";
   position: absolute;
-  top: 30px;
-  left: 30px;
-  bottom: 30px;
-  right: 30px;
+  top: 40px;
+  left: 40px;
+  bottom: 40px;
+  right: 40px;
   border-radius: 50%;
-  border: 5px solid transparent;
-  border-top-color: #ff79da;
-  border-bottom-color: #ff79da;
-  opacity: 0.6;
-  -webkit-animation: spin-reverse 2s linear 0s both;
-          animation: spin-reverse 2s linear 0s both;
+  border-top: 10px solid #ff79da;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ff79da;
+  border-left: 10px solid transparent;
+  opacity: 0.8;
+  -webkit-animation: spin 2s linear 0s both;
+          animation: spin 2s linear 0s both;
 }
 
 body {
   margin: 0;
-  z-index: 1;
 }
 
 * a {
@@ -244,6 +268,7 @@ body {
 .pres {
   background-color: #faf9f9;
   text-align: center;
+  width: 100%;
 }
 
 .pres__container {
@@ -284,8 +309,8 @@ body {
 }
 
 .pres__button:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.7;
   cursor: pointer;
   -webkit-transition: 300ms;
@@ -312,13 +337,13 @@ body {
   margin-bottom: 20px;
   border-radius: 20px;
   position: relative;
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.16);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.3);
 }
 
 .work__step:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.7;
   cursor: pointer;
   -webkit-transition: 300ms;
@@ -496,8 +521,8 @@ body {
   background-clip: text;
   background-position: bottom;
   background-repeat: no-repeat;
-  -webkit-animation: animationheart 1s ease-in-out;
-  animation: animationheart 1s ease-in-out;
+  -webkit-animation: animationheart 1s linear;
+  animation: animationheart 1s linear;
 }
 
 @-webkit-keyframes rotate {
@@ -576,8 +601,6 @@ body {
 }
 
 .main {
-  margin: 0px;
-  padding: 0px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -587,6 +610,8 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin: 0px;
+  padding: 0px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -613,6 +638,7 @@ body {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-top: -60px;
 }
 
 #menu {
@@ -697,8 +723,8 @@ body {
   background-clip: text;
   background-position: bottom;
   background-repeat: no-repeat;
-  -webkit-animation: animationheart 1s ease-in-out;
-  animation: animationheart 1s ease-in-out;
+  -webkit-animation: animationheart 1s linear;
+  animation: animationheart 1s linear;
 }
 
 .menu__grid {
@@ -751,16 +777,16 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-animation: slideMenu 0.5s ease;
-          animation: slideMenu 0.5s ease;
+  -webkit-animation: slideMenu 0.5s linear;
+          animation: slideMenu 0.5s linear;
   -webkit-transform-origin: right;
           transform-origin: right;
 }
 
 .menu__grid__card:hover .menu__card-price {
   padding-right: 70px;
-  -webkit-transition: 0.5 ease;
-  transition: 0.5 ease;
+  -webkit-transition: 0.5 linear;
+  transition: 0.5 linear;
 }
 
 .menu__grid__card .check {
@@ -784,7 +810,7 @@ body {
 }
 
 .menu__card-dish {
-  margin-left: 20px;
+  margin-left: 10px;
   white-space: nowrap;
   overflow: hidden;
 }
@@ -846,8 +872,8 @@ body {
 }
 
 .menu__button:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
-          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+          box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
   opacity: 0.7;
   cursor: pointer;
   -webkit-transition: 300ms;
@@ -897,5 +923,10 @@ body {
 #card-9 {
   -webkit-animation: opacity 1.5s both 1s;
           animation: opacity 1.5s both 1s;
+}
+
+#card-10 {
+  -webkit-animation: opacity 1.5s both 0.5s;
+          animation: opacity 1.5s both 0.5s;
 }
 /*# sourceMappingURL=main.css.map */

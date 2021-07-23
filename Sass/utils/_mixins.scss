@@ -1,24 +1,25 @@
+/// mixin for centering elements
 @mixin flex-center {
     display:flex;
     justify-content: center;
     align-items: center;
 }
-
+/// Mixin button classic
 @mixin button {
     color: #fff;
     padding: 0 20px;
     border-radius: 20px;
     opacity: 1;
 }
-/// Soulignement des titres des menus
+/// Underlining of menu titles
 @mixin underline {
     border-bottom: 3px solid $color-tertiary;
     width: 50px;
 }
-/// Permet d'appliquer un gradient sur le texte avec BG img (gradient),
-/// BG size pr que gradient prenne toute la H et la W, 
-/// BG-clip pour n'afficher BG que la ou il y a du texte,
-/// Text-fill-color (transparent) pour supprimer remplissage du texte. BG-Color (par défault) si problème d'affichage.
+/// Allows to apply a gradient on the text with BG img (gradient),
+/// BG size so that gradient takes all of H and W, 
+/// BG-clip to display BG only where there is text,
+/// Text-fill-color (transparent) to remove fill from text. BG-Color (by default) if display problem.
 @mixin gradient-text {
     background-color: #fff;
     background-image: $color-gradient;
@@ -28,7 +29,7 @@
     -webkit-text-fill-color : transparent;
     -moz-text-fill-color: transparent;
 }
-/// Animation des coeurs
+/// Animation of hearts
 @mixin heart-animation {
     @keyframes animationheart {
         0% {
@@ -50,34 +51,7 @@
         background-clip: text;
         background-position: bottom;
         background-repeat: no-repeat;
-        -webkit-animation: animationheart 1s ease-in-out;
-        animation: animationheart 1s ease-in-out;
+        -webkit-animation: animationheart 1s linear;
+        animation: animationheart 1s linear;
     }
 }
-/// animation des cartes de menus
-@mixin chekedcard {
-    @keyframes slide {
-        0% {
-            transform: translateX(50px);
-        }
-        25% {
-            transform: translateX(40px);
-        }
-        50% {
-            transform: translateX(30px);
-        }
-        75% {
-            transform: translateX(20px);
-        }
-        100% {
-            transform: translateX(0x);
-        }   
-                   
-    }  
-    
-    background-color: $color-tertiary;
-    -webkit-animation: slide 1s linear forwards;
-    animation: slide 1s linear forwards;
-   
-}
-

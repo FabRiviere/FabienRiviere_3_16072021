@@ -1,4 +1,4 @@
-
+/// menu animations
 @keyframes rotate {
     0% {
         transform: rotate(0);
@@ -7,7 +7,6 @@
             transform: rotate(360deg);
     }
 }
-
 @keyframes slideMenu {
     0% {
                 transform: scaleX(0);
@@ -16,7 +15,6 @@
                 transform: scaleX(-50px);
     }
 }
-
 @keyframes opacity {
     0% {
         opacity: 0;
@@ -27,8 +25,7 @@
         margin-top:20px;
     }
 }
-
-
+/// Body margin
 body {
     margin: 0px;
 }
@@ -36,15 +33,15 @@ body {
     text-decoration: none;
     color: #fff;
 }
-
+///main section
 .main {    
+    @include flex-center;
     margin: 0px;
     padding: 0px;
-    @include flex-center;
     flex-direction: column;
     font-family: $font-text;
 }
-
+///Header
 .header {
     & a {
         color: #000;  
@@ -54,15 +51,18 @@ body {
         margin: 0 100px 0 10px;
     }
 }
+///restaurant pic
 .image {
     width: 100%;
     height: 50vh;
     &__img {
         width: 100%;
         height: 100%;
-        object-fit: cover;      
+        object-fit: cover;
+        margin-top: -60px;      
     }
 }
+///Menu section
 #menu {
     @include flex-center;
     width: 100%;
@@ -74,7 +74,6 @@ body {
     background-color: #faf9f9;
     border-radius: 50px 50px 0 0;
     padding: 20px 20px 50px 20px;
-    
     &__header {
         display: flex;
         justify-content: space-around;
@@ -110,7 +109,6 @@ body {
     }
     &__container {
         margin: 0 20px 50px 20px;
-
     }
 }
 .menu__grid__card {
@@ -128,12 +126,12 @@ body {
     margin-top: 20px; 
     &:hover .check {     
             @include flex-center;
-            animation: slideMenu 0.5s ease;
+            animation: slideMenu 0.5s linear;
             transform-origin: right;
     }
     &:hover .menu__card-price {
         padding-right: 70px;
-        transition: 0.5 ease;
+        transition: 0.5 linear;
     }
     .check {
         display: none;
@@ -153,7 +151,7 @@ body {
     }
 }       
 .menu__card-dish {
-    margin-left: 20px;
+    margin-left: 10px;
     white-space: nowrap;
     overflow: hidden;
     & p {
@@ -178,7 +176,7 @@ body {
 .menu__container__button {
     @include flex-center;
 }
-
+/// Purchase order button
 .menu__button {
     @include button;
     padding: 20px 50px 20px 50px;
@@ -186,10 +184,9 @@ body {
         @include button-hover;
     }
 }
-
+/// Menu card animations
 #card-1 {
     animation: opacity 1.5s both 0.2s;
-    
 }
 #card-2 {
     animation: opacity 1.5s both 0.3s;
@@ -214,4 +211,7 @@ body {
 }
 #card-9 {
     animation: opacity 1.5s both 1s;
+}
+#card-10 {
+    animation: opacity 1.5s both 0.5s;
 }
