@@ -58,27 +58,26 @@
 @mixin chekedcard {
     @keyframes slide {
         0% {
-            transform: translateX(100px);
-        }
-        25% {
-            transform: translateX(75px);
-        }
-        50% {
             transform: translateX(50px);
         }
+        25% {
+            transform: translateX(40px);
+        }
+        50% {
+            transform: translateX(30px);
+        }
         75% {
-            transform: translateX(25px);
+            transform: translateX(20px);
         }
         100% {
-            transform: translateX(0px);
+            transform: translateX(0x);
         }   
-        0%,50% {
-            opacity: 0;
-        }    
+                   
     }  
     
     background-color: $color-tertiary;
-    -webkit-animation: slide 2s ease-in-out forwards;
-    animation: slide 2s ease-in-out forwards;
+    -webkit-animation: slide 1s linear forwards;
+    animation: slide 1s linear forwards;
    
 }
+
