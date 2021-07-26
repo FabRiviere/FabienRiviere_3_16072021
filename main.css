@@ -525,6 +525,127 @@ body {
   animation: animationheart 1s linear;
 }
 
+@media screen and (min-width: 650px) {
+  .pres__container {
+    padding: 0;
+  }
+  .work__container {
+    padding: 10px;
+  }
+  .work__steps {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 98%;
+  }
+  .work__step {
+    margin: 8px;
+    width: 33%;
+  }
+  .work__step-ico {
+    padding: 25px;
+  }
+  .restaurants__title {
+    margin: 20px;
+  }
+  .restaurant__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    padding: 0 20px;
+  }
+  .restaurant__cards a {
+    width: 50%;
+    margin: 0;
+  }
+  .restaurant__card {
+    width: 90%;
+    margin: 20px 20px;
+  }
+}
+
+@media screen and (min-width: 1250px) {
+  .header {
+    height: 120px;
+  }
+  .header__logo {
+    font-size: 3em;
+  }
+  .location {
+    font-size: 1.5em;
+  }
+  h2 {
+    font-size: 1.8em;
+  }
+  .pres__title {
+    font-size: 2em;
+  }
+  .pres__container {
+    padding: 20px 0;
+  }
+  .pres__container p {
+    font-size: 1.5em;
+    margin: 10px 0 10px 0;
+  }
+  .pres__button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 50px;
+  }
+  .work {
+    padding: 20px;
+  }
+  .work__container {
+    padding: 20px;
+  }
+  .work__step {
+    font-size: 1.2em;
+    margin: 20px;
+  }
+  .work__step-ico {
+    padding: 0 50px;
+  }
+  .restaurant__card-image {
+    height: 350px;
+  }
+  .restaurant__card-new {
+    padding: 20px 40px;
+    font-size: 1.2em;
+  }
+  .card__description {
+    height: 100px;
+    font-size: 1.2em;
+  }
+  .footer__bloc {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 98%;
+    font-size: 1.2em;
+  }
+  .footer__bloc-links {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 80%;
+  }
+}
+
 @-webkit-keyframes rotate {
   0% {
     -webkit-transform: rotate(0);

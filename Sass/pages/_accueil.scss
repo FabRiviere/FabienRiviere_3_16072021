@@ -248,3 +248,107 @@ body {
 .heart-full {
     @include heart-animation;
 }
+
+
+/// Media Queries
+
+@media screen and (min-width: 650px) {
+    .pres__container {
+        padding: 0;
+    }
+    .work__container {
+        padding: 10px;
+    }
+    .work__steps {
+        display: flex;
+        justify-content: center;
+        width: 98%;
+    }
+    .work__step {
+        margin: 8px;
+        width: 33%;
+        &-ico {
+            padding: 25px;
+        }
+    }
+    .restaurants__title {
+        margin: 20px;
+    }
+    .restaurant__cards {
+        display: flex;
+        flex-flow: row wrap;
+        padding: 0 20px;
+        & a {
+            width: 50%;
+            margin: 0;
+        }
+    }
+    .restaurant__card {
+        width: 90%;
+        margin: 20px 20px;
+    }
+}
+@media screen and (min-width: 1250px) {
+    .header {
+        height: 120px;
+        &__logo {
+            font-size: 3em;
+        }
+    }
+    .location {
+        font-size: 1.5em;
+    }
+    h2 {
+        font-size: 1.8em;
+    }
+    .pres__title {
+        font-size: 2em;
+    }
+    .pres__container {
+        padding: 20px 0;
+        & p {
+            font-size: 1.5em;
+            margin: 10px 0 10px 0;
+        }
+    }
+    .pres__button {
+        display: flex;
+        padding: 0 50px;
+    }
+    .work {
+        padding: 20px;
+        &__container {
+            padding: 20px;
+        }
+        &__step {
+            font-size: 1.2em;
+            margin: 20px;
+            &-ico {
+                padding: 0 50px;
+            }
+        }
+    }
+    .restaurant__card-image {
+        height: 350px;
+    }
+    .restaurant__card-new {
+        padding: 20px 40px;
+        font-size: 1.2em;
+    }
+    .card__description {
+        height: 100px;
+        font-size: 1.2em;
+    }
+    .footer__bloc {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 98%;
+        font-size: 1.2em;
+        &-links {
+            display: flex;
+            justify-content: space-around;
+            width: 80%;
+        }
+    }
+}
