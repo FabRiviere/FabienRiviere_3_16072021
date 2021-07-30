@@ -16,42 +16,37 @@
     border-bottom: 3px solid $color-tertiary;
     width: 50px;
 }
-/// Allows to apply a gradient on the text with BG img (gradient),
-/// BG size so that gradient takes all of H and W, 
-/// BG-clip to display BG only where there is text,
-/// Text-fill-color (transparent) to remove fill from text. BG-Color (by default) if display problem.
-@mixin gradient-text {
-    background-color: #fff;
-    background-image: $color-gradient;
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color : transparent;
-    -moz-text-fill-color: transparent;
-}
 /// Animation of hearts
 @mixin heart-animation {
-    @keyframes animationheart {
+    @keyframes heart-apparition {
         0% {
-            background-size: 100% 0%;
+            opacity: 0;
+        }
+        25% {
+            opacity: 0.25;
+        }
+        50% {
+            opacity: 0.5; 
         }
         100% {
-            background-size: 100% 100%;
+            opacity: 1;
         }
     }
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
     position: absolute;
+    color: transparent;
     &:hover {
-        cursor: pointer;
         background: $color-gradient;
-        background-size: 100% 100%;
+        background-clip: border-box;
         -webkit-background-clip: text;
-        background-clip: text;
-        background-position: bottom;
-        background-repeat: no-repeat;
-        -webkit-animation: animationheart 1s linear;
-        animation: animationheart 1s linear;
+        -webkit-text-fill-color: transparent;
+        animation: heart-apparition 0.8s ease-in-out; 
     }
+}
+
+@mixin gradient-text {
+    color: transparent;
+    background: $color-gradient;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }

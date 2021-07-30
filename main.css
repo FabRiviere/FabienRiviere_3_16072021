@@ -170,14 +170,12 @@ body {
 }
 
 .loader-circle-1 span {
-  background-color: #fff;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
-  background-image: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-size: 100%;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
+  background-clip: border-box;
   -webkit-background-clip: text;
-  -moz-background-clip: text;
   -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
   font-size: 2em;
   font-weight: bold;
 }
@@ -488,41 +486,48 @@ body {
 }
 
 .heart-full {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   position: absolute;
+  color: transparent;
 }
 
-@-webkit-keyframes animationheart {
+@-webkit-keyframes heart-apparition {
   0% {
-    background-size: 100% 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
-    background-size: 100% 100%;
+    opacity: 1;
   }
 }
 
-@keyframes animationheart {
+@keyframes heart-apparition {
   0% {
-    background-size: 100% 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
-    background-size: 100% 100%;
+    opacity: 1;
   }
 }
 
 .heart-full:hover {
-  cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-size: 100% 100%;
+  background-clip: border-box;
   -webkit-background-clip: text;
-  background-clip: text;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  -webkit-animation: animationheart 1s linear;
-  animation: animationheart 1s linear;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: heart-apparition 0.8s ease-in-out;
+          animation: heart-apparition 0.8s ease-in-out;
 }
 
 @media screen and (min-width: 650px) {
@@ -670,23 +675,31 @@ body {
 
 @-webkit-keyframes slideMenu {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    width: 0%;
+  }
+  25% {
+    width: 4%;
+  }
+  50% {
+    width: 8%;
   }
   100% {
-    -webkit-transform: scaleX(-50px);
-            transform: scaleX(-50px);
+    width: 12%;
   }
 }
 
 @keyframes slideMenu {
   0% {
-    -webkit-transform: scaleX(0);
-            transform: scaleX(0);
+    width: 0%;
+  }
+  25% {
+    width: 4%;
+  }
+  50% {
+    width: 8%;
   }
   100% {
-    -webkit-transform: scaleX(-50px);
-            transform: scaleX(-50px);
+    width: 12%;
   }
 }
 
@@ -820,32 +833,33 @@ body {
 }
 
 .hearth-empty:hover > .heart-full {
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
   position: absolute;
+  color: transparent;
 }
 
-@keyframes animationheart {
+@keyframes heart-apparition {
   0% {
-    background-size: 100% 0%;
+    opacity: 0;
+  }
+  25% {
+    opacity: 0.25;
+  }
+  50% {
+    opacity: 0.5;
   }
   100% {
-    background-size: 100% 100%;
+    opacity: 1;
   }
 }
 
 .hearth-empty:hover > .heart-full:hover {
-  cursor: pointer;
   background: -webkit-gradient(linear, left top, left bottom, from(#ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da 0%, #9356dc 100%);
-  background-size: 100% 100%;
+  background-clip: border-box;
   -webkit-background-clip: text;
-  background-clip: text;
-  background-position: bottom;
-  background-repeat: no-repeat;
-  -webkit-animation: animationheart 1s linear;
-  animation: animationheart 1s linear;
+  -webkit-text-fill-color: transparent;
+  -webkit-animation: heart-apparition 0.8s ease-in-out;
+          animation: heart-apparition 0.8s ease-in-out;
 }
 
 .menu__grid {
@@ -905,9 +919,9 @@ body {
 }
 
 .menu__grid__card:hover .menu__card-price {
-  padding-right: 70px;
-  -webkit-transition: 0.5 linear;
-  transition: 0.5 linear;
+  padding-right: 80px;
+  -webkit-transition: 0.5s linear;
+  transition: 0.5s linear;
 }
 
 .menu__grid__card .check {
@@ -915,6 +929,7 @@ body {
   position: absolute;
   background-color: #99e2d0;
   height: 100%;
+  width: 12%;
   padding: 0 15px;
   right: 0px;
   top: 0px;
@@ -1081,7 +1096,7 @@ body {
   .menu__grid__card {
     width: 45%;
     height: 15vh;
-    font-size: 1.1em;
+    font-size: 1em;
     margin: 0 10px 0 10px;
   }
   .menu__container__button {
@@ -1144,6 +1159,7 @@ body {
     width: 100%;
     height: 100px;
     font-size: 1.1em;
+    margin-top: 2vh;
   }
   .menu__button {
     max-width: 500px;
