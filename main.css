@@ -794,7 +794,7 @@ body {
   width: 100%;
   background-color: #faf9f9;
   border-radius: 50px 50px 0 0;
-  padding: 20px 20px 50px 20px;
+  padding: 20px 0px 50px 0px;
 }
 
 .menu__header {
@@ -877,7 +877,7 @@ body {
 }
 
 .menu__grid__container {
-  margin: 0 20px 50px 20px;
+  margin: 0 5px 50px 5px;
 }
 
 .menu__grid__card {
@@ -964,7 +964,7 @@ body {
 
 .menu__card-price {
   font-weight: bold;
-  padding: 0 20px 0 10px;
+  padding-right: 10px;
 }
 
 .menu__card {
@@ -1095,7 +1095,7 @@ body {
     margin: 0;
   }
   .menu__grid__card {
-    width: 45%;
+    width: 47%;
     height: 15vh;
     font-size: 1em;
     margin: 0 10px 0 10px;
