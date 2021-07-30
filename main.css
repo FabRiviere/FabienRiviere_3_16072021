@@ -916,10 +916,11 @@ body {
           animation: slideMenu 0.5s linear;
   -webkit-transform-origin: right;
           transform-origin: right;
+  margin-left: 20px;
 }
 
 .menu__grid__card:hover .menu__card-price {
-  padding-right: 80px;
+  padding-right: 100px;
   -webkit-transition: 0.5s linear;
   transition: 0.5s linear;
 }

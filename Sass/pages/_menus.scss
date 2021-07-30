@@ -137,9 +137,10 @@ body {
             @include flex-center;
             animation: slideMenu 0.5s linear;
             transform-origin: right;
+            margin-left: 20px;
     }
     &:hover .menu__card-price {
-        padding-right: 80px;
+        padding-right: 100px;
         transition: 0.5s linear;
     }
     .check {
